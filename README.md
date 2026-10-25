@@ -3,7 +3,6 @@
 **Title:** *Lightweight, Drift-Adaptive and Privacy-Preserving Intrusion Detection in Heterogeneous IoT Networks: A Dual-Tier Edge–Cloud Framework*  
 **Authors:** Vishu Singh (`23BAI0091`) & Shivam Raj (`23BCI0162`)  
 **Supervisor:** Prof. Jim Solomon Raja — School of Computer Science and Engineering (SCOPE), VIT  
-**Final Review Date:** 28 October 2026
 
 ---
 
