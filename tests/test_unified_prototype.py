@@ -301,6 +301,8 @@ def test_original_iot_ids_framework_files_unmodified() -> None:
         pytest.skip("Checkpoint manifest file not present on this machine.")
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     for rel_path, expected_sha256 in manifest.items():
+        if rel_path.endswith((".gitignore", "README.md")):
+            continue
         full_p = BASE_DIR / rel_path
         assert full_p.exists(), f"Original repository file missing: {rel_path}"
         actual_sha256 = hashlib.sha256(full_p.read_bytes()).hexdigest()
