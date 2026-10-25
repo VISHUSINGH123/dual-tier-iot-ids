@@ -1,0 +1,15 @@
+{
+  "duration_ms": "duration",
+  "packet_count": "src_pkts",
+  "byte_count": "src_bytes",
+  "src_port": "src_port",
+  "dst_port": "dst_port",
+  "tcp_flags": null,
+  "mqtt_qos": null,
+  "mqtt_payload_bytes": null,
+  "coap_code": null,
+  "http_status": "http_status_code",
+  "sixlowpan_dispatch": null,
+  "payload_entropy": "http_response_body_len",
+  "protocol": "proto"
+}

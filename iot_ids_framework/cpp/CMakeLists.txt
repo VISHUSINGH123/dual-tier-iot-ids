@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.16)
+project(iot_ids_edge_runtime LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
+find_package(onnxruntime CONFIG REQUIRED)
+add_executable(iot_ids_edge_runtime edge_runtime.cpp)
+target_link_libraries(iot_ids_edge_runtime PRIVATE onnxruntime::onnxruntime)

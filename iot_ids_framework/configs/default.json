@@ -1,0 +1,6 @@
+{
+  "classes": ["benign", "ddos", "dos", "injection", "mitm", "password", "port_scan", "ransomware", "scanning", "spoofing", "xss", "backdoor", "botnet", "brute_force", "web_attack"],
+  "feature_names": ["protocol_id", "duration_ms", "packet_count", "byte_count", "mean_packet_bytes", "src_port", "dst_port", "tcp_flags", "mqtt_qos", "mqtt_payload_bytes", "coap_code", "http_status", "sixlowpan_dispatch", "payload_entropy"],
+  "drift": {"window_size": 500, "bins": 16, "threshold": 0.15, "consecutive_windows": 3},
+  "alerts": {"top_k": 5, "attack_only": true}
+}

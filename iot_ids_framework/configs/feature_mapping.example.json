@@ -1,0 +1,15 @@
+{
+  "duration_ms": "flow_duration_ms",
+  "packet_count": "packet_count",
+  "byte_count": "byte_count",
+  "src_port": "src_port",
+  "dst_port": "dst_port",
+  "tcp_flags": "tcp_flags",
+  "mqtt_qos": "mqtt_qos",
+  "mqtt_payload_bytes": "mqtt_payload_bytes",
+  "coap_code": "coap_code",
+  "http_status": "http_status",
+  "sixlowpan_dispatch": "sixlowpan_dispatch",
+  "payload_entropy": "payload_entropy",
+  "protocol": "protocol"
+}
