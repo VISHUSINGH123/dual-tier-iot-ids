@@ -16,6 +16,8 @@ __pycache__/
 *$py.class
 *.so
 *.pyd
+*.egg-info/
+*.egg
 
 # Testing & Coverage Caches
 .pytest_cache/
@@ -51,6 +53,7 @@ logs/*.log
 logs/*.jsonl
 results/*.json
 results/*.csv
+iot_ids_framework/artifacts/*.jsonl
 
 # Retain essential configuration, lightweight synthetic demos, and reports
 !data/synthetic_edge_iiotset_demo.csv

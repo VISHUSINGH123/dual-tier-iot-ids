@@ -1,0 +1,17 @@
+[
+  "benign",
+  "backdoor",
+  "botnet",
+  "brute_force",
+  "ddos",
+  "dos",
+  "injection",
+  "mitm",
+  "password",
+  "port_scan",
+  "ransomware",
+  "scanning",
+  "spoofing",
+  "web_attack",
+  "xss"
+]
