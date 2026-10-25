@@ -1,0 +1,293 @@
+{
+  "model_type": "LightGBM_Classifier_Experimental",
+  "feature_schema": "ZEEK_NATIVE_16_FEATURES",
+  "features": [
+    "proto_code",
+    "service_code",
+    "conn_state_code",
+    "duration_ms",
+    "orig_bytes",
+    "resp_bytes",
+    "missed_bytes",
+    "orig_pkts",
+    "orig_ip_bytes",
+    "resp_pkts",
+    "resp_ip_bytes",
+    "total_pkts",
+    "total_ip_bytes",
+    "mean_ip_bytes_per_pkt",
+    "orig_pkt_ratio",
+    "tcp_flags_reconstructed",
+    "dst_port_bucket"
+  ],
+  "split_strategy": "Scenario_Based_Held_Out_Cross_Capture_Split",
+  "train_scenarios": [
+    "CTU-Honeypot-Capture-4-1",
+    "CTU-IoT-Malware-Capture-1-1",
+    "CTU-IoT-Malware-Capture-17-1",
+    "CTU-IoT-Malware-Capture-20-1",
+    "CTU-IoT-Malware-Capture-3-1",
+    "CTU-IoT-Malware-Capture-33-1",
+    "CTU-IoT-Malware-Capture-34-1",
+    "CTU-IoT-Malware-Capture-42-1",
+    "CTU-IoT-Malware-Capture-43-1",
+    "CTU-IoT-Malware-Capture-48-1",
+    "CTU-IoT-Malware-Capture-49-1",
+    "CTU-IoT-Malware-Capture-52-1",
+    "CTU-IoT-Malware-Capture-7-1",
+    "CTU-IoT-Malware-Capture-9-1"
+  ],
+  "test_scenarios": [
+    "CTU-Honeypot-Capture-5-1",
+    "Somfy-01",
+    "CTU-IoT-Malware-Capture-21-1",
+    "CTU-IoT-Malware-Capture-35-1",
+    "CTU-IoT-Malware-Capture-36-1",
+    "CTU-IoT-Malware-Capture-39-1",
+    "CTU-IoT-Malware-Capture-44-1",
+    "CTU-IoT-Malware-Capture-60-1",
+    "CTU-IoT-Malware-Capture-8-1"
+  ],
+  "train_sample_size": 26452,
+  "test_sample_size": 13741,
+  "train_label_distribution": {
+    "benign": 452,
+    "Malicious": 19354,
+    "Benign": 6646
+  },
+  "test_label_distribution": {
+    "benign": 1504,
+    "Benign": 5133,
+    "Malicious": 7104
+  },
+  "test_detailed_label_distribution": {
+    "-": 6637,
+    "C&C-Torii": 3,
+    "C&C": 1603,
+    "C&C-FileDownload": 16,
+    "C&C-HeartBeat": 97,
+    "Okiru": 1997,
+    "PartOfAHorizontalPortScan": 1936,
+    "DDoS": 1452
+  },
+  "binary_metrics": {
+    "confusion_matrix_labels": [
+      "benign (0)",
+      "malicious (1)"
+    ],
+    "confusion_matrix": [
+      [
+        4613,
+        2024
+      ],
+      [
+        92,
+        7012
+      ]
+    ],
+    "tn": 4613,
+    "fp": 2024,
+    "fn": 92,
+    "tp": 7012,
+    "false_positive_rate": 0.305,
+    "macro_f1": 0.8412,
+    "accuracy": 0.846,
+    "per_class": {
+      "benign": {
+        "precision": 0.9804,
+        "recall": 0.695,
+        "f1": 0.8134,
+        "support": 6637
+      },
+      "malicious": {
+        "precision": 0.776,
+        "recall": 0.987,
+        "f1": 0.8689,
+        "support": 7104
+      }
+    }
+  },
+  "feature_importances": {
+    "duration_ms": 680,
+    "dst_port_bucket": 556,
+    "mean_ip_bytes_per_pkt": 258,
+    "tcp_flags_reconstructed": 155,
+    "orig_bytes": 151,
+    "service_code": 135,
+    "conn_state_code": 117,
+    "resp_bytes": 92,
+    "total_pkts": 87,
+    "total_ip_bytes": 79,
+    "orig_pkt_ratio": 79,
+    "proto_code": 74,
+    "orig_ip_bytes": 74,
+    "resp_ip_bytes": 71,
+    "orig_pkts": 65,
+    "resp_pkts": 46,
+    "missed_bytes": 23
+  },
+  "per_scenario_eval": {
+    "CTU-Honeypot-Capture-5-1": {
+      "flows_evaluated": 1374,
+      "confusion_matrix": [
+        [
+          1238,
+          136
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "tn": 1238,
+      "fp": 136,
+      "fn": 0,
+      "tp": 0
+    },
+    "Somfy-01": {
+      "flows_evaluated": 130,
+      "confusion_matrix": [
+        [
+          120,
+          10
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "tn": 120,
+      "fp": 10,
+      "fn": 0,
+      "tp": 0
+    },
+    "CTU-IoT-Malware-Capture-21-1": {
+      "flows_evaluated": 2000,
+      "confusion_matrix": [
+        [
+          1997,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "tn": 1997,
+      "fp": 0,
+      "fn": 1,
+      "tp": 2
+    },
+    "CTU-IoT-Malware-Capture-35-1": {
+      "flows_evaluated": 2000,
+      "confusion_matrix": [
+        [
+          92,
+          1865
+        ],
+        [
+          12,
+          31
+        ]
+      ],
+      "tn": 92,
+      "fp": 1865,
+      "fn": 12,
+      "tp": 31
+    },
+    "CTU-IoT-Malware-Capture-36-1": {
+      "flows_evaluated": 2000,
+      "confusion_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          2000
+        ]
+      ],
+      "tn": 0,
+      "fp": 0,
+      "fn": 0,
+      "tp": 2000
+    },
+    "CTU-IoT-Malware-Capture-39-1": {
+      "flows_evaluated": 2000,
+      "confusion_matrix": [
+        [
+          47,
+          11
+        ],
+        [
+          0,
+          1942
+        ]
+      ],
+      "tn": 47,
+      "fp": 11,
+      "fn": 0,
+      "tp": 1942
+    },
+    "CTU-IoT-Malware-Capture-44-1": {
+      "flows_evaluated": 237,
+      "confusion_matrix": [
+        [
+          211,
+          0
+        ],
+        [
+          8,
+          18
+        ]
+      ],
+      "tn": 211,
+      "fp": 0,
+      "fn": 8,
+      "tp": 18
+    },
+    "CTU-IoT-Malware-Capture-60-1": {
+      "flows_evaluated": 2000,
+      "confusion_matrix": [
+        [
+          453,
+          2
+        ],
+        [
+          71,
+          1474
+        ]
+      ],
+      "tn": 453,
+      "fp": 2,
+      "fn": 71,
+      "tp": 1474
+    },
+    "CTU-IoT-Malware-Capture-8-1": {
+      "flows_evaluated": 2000,
+      "confusion_matrix": [
+        [
+          455,
+          0
+        ],
+        [
+          0,
+          1545
+        ]
+      ],
+      "tn": 455,
+      "fp": 0,
+      "fn": 0,
+      "tp": 1545
+    }
+  },
+  "comparison_with_baseline_onnx": {
+    "baseline_model": "iot_ids_framework/artifacts/edge_ids.onnx (untouched)",
+    "baseline_fpr": 0.9524,
+    "baseline_macro_f1": 0.3898,
+    "experimental_fpr": 0.305,
+    "experimental_macro_f1": 0.8412,
+    "fpr_reduction": 0.6474,
+    "macro_f1_gain": 0.4514
+  }
+}

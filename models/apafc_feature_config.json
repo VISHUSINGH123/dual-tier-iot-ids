@@ -1,0 +1,543 @@
+{
+  "k_features": 14,
+  "protocol_diversity_weight": 0.15,
+  "random_state": 42,
+  "full_feature_set": [
+    "arp.opcode",
+    "arp.hw.size",
+    "icmp.checksum",
+    "icmp.seq_le",
+    "icmp.transmit_timestamp",
+    "icmp.unused",
+    "http.content_length",
+    "http.request.method",
+    "http.referer",
+    "http.request.version",
+    "http.response",
+    "http.tls_port",
+    "tcp.ack",
+    "tcp.ack_raw",
+    "tcp.checksum",
+    "tcp.connection.fin",
+    "tcp.connection.rst",
+    "tcp.connection.syn",
+    "tcp.connection.synack",
+    "tcp.dstport",
+    "tcp.flags",
+    "tcp.flags.ack",
+    "tcp.len",
+    "tcp.seq",
+    "tcp.srcport",
+    "udp.port",
+    "udp.stream",
+    "udp.time_delta",
+    "dns.qry.name",
+    "dns.qry.name.len",
+    "dns.qry.qu",
+    "dns.qry.type",
+    "dns.retransmission",
+    "dns.retransmit_request",
+    "dns.retransmit_request_in",
+    "mqtt.conack.flags",
+    "mqtt.conflag.cleansess",
+    "mqtt.conflags",
+    "mqtt.hdrflags",
+    "mqtt.len",
+    "mqtt.msg_decoded_as",
+    "mqtt.msgtype",
+    "mqtt.proto_len",
+    "mqtt.protoname",
+    "mqtt.topic_len",
+    "mqtt.ver",
+    "mbtcp.len",
+    "mbtcp.trans_id",
+    "mbtcp.unit_id"
+  ],
+  "selected_subset": [
+    "tcp.ack",
+    "tcp.srcport",
+    "tcp.dstport",
+    "tcp.len",
+    "icmp.seq_le",
+    "tcp.seq",
+    "udp.stream",
+    "http.content_length",
+    "tcp.checksum",
+    "tcp.connection.rst",
+    "tcp.ack_raw",
+    "icmp.checksum",
+    "tcp.flags",
+    "mqtt.hdrflags"
+  ],
+  "summary": {
+    "total_candidate_features": 49,
+    "k_selected": 14,
+    "selection_method": "LightGBM Split-Gain + APAFC Protocol-Aware Weighting (Training Split Only)",
+    "protocol_aware_bonus_applied": true,
+    "selected_features": [
+      "tcp.ack",
+      "tcp.srcport",
+      "tcp.dstport",
+      "tcp.len",
+      "icmp.seq_le",
+      "tcp.seq",
+      "udp.stream",
+      "http.content_length",
+      "tcp.checksum",
+      "tcp.connection.rst",
+      "tcp.ack_raw",
+      "icmp.checksum",
+      "tcp.flags",
+      "mqtt.hdrflags"
+    ],
+    "selected_protocol_breakdown": {
+      "Generic_Flow": 12,
+      "HTTP": 1,
+      "MQTT": 1
+    },
+    "feature_rankings": [
+      {
+        "feature_name": "tcp.ack",
+        "protocol_family": "Generic_Flow",
+        "is_protocol_derived": false,
+        "gain_importance": 82694.87388099552,
+        "normalized_importance": 0.1997983894973636,
+        "rank": 1,
+        "selected": true
+      },
+      {
+        "feature_name": "tcp.srcport",
+        "protocol_family": "Generic_Flow",
+        "is_protocol_derived": false,
+        "gain_importance": 71113.03951336196,
+        "normalized_importance": 0.17181561686010824,
+        "rank": 2,
+        "selected": true
+      },
+      {
+        "feature_name": "tcp.dstport",
+        "protocol_family": "Generic_Flow",
+        "is_protocol_derived": false,
+        "gain_importance": 60454.300758198435,
+        "normalized_importance": 0.1460631277708877,
+        "rank": 3,
+        "selected": true
+      },
+      {
+        "feature_name": "tcp.len",
+        "protocol_family": "Generic_Flow",
+        "is_protocol_derived": false,
+        "gain_importance": 41644.8918210932,
+        "normalized_importance": 0.10061787298473092,
+        "rank": 4,
+        "selected": true
+      },
+      {
+        "feature_name": "icmp.seq_le",
+        "protocol_family": "Generic_Flow",
+        "is_protocol_derived": false,
+        "gain_importance": 33190.03962917333,
+        "normalized_importance": 0.08019017569100467,
+        "rank": 5,
+        "selected": true
+      },
+      {
+        "feature_name": "tcp.seq",
+        "protocol_family": "Generic_Flow",
+        "is_protocol_derived": false,
+        "gain_importance": 30143.925929735065,
+        "normalized_importance": 0.07283048599307422,
+        "rank": 6,
+        "selected": true
+      },
+      {
+        "feature_name": "udp.stream",
+        "protocol_family": "Generic_Flow",
+        "is_protocol_derived": false,
+        "gain_importance": 29477.918778843396,
+        "normalized_importance": 0.07122135171549643,
+        "rank": 7,
+        "selected": true
+      },
+      {
+        "feature_name": "http.content_length",
+        "protocol_family": "HTTP",
+        "is_protocol_derived": true,
+        "gain_importance": 17694.444420466247,
+        "normalized_importance": 0.04275139839196532,
+        "rank": 8,
+        "selected": true
+      },
+      {
+        "feature_name": "tcp.checksum",
+        "protocol_family": "Generic_Flow",
+        "is_protocol_derived": false,
+        "gain_importance": 11129.225085173093,
+        "normalized_importance": 0.026889227155375815,
+        "rank": 9,
+        "selected": true
+      },
+      {
+        "feature_name": "tcp.connection.rst",
+        "protocol_family": "Generic_Flow",
+        "is_protocol_derived": false,
+        "gain_importance": 10717.96559239436,
+        "normalized_importance": 0.025895586552683304,
+        "rank": 10,
+        "selected": true
+      },
+      {
+        "feature_name": "tcp.ack_raw",
+        "protocol_family": "Generic_Flow",
+        "is_protocol_derived": false,
+        "gain_importance": 7533.52518753566,
+        "normalized_importance": 0.018201686864817414,
+        "rank": 11,
+        "selected": true
+      },
+      {
+        "feature_name": "icmp.checksum",
+        "protocol_family": "Generic_Flow",
+        "is_protocol_derived": false,
+        "gain_importance": 5938.504298231472,
+        "normalized_importance": 0.01434797030487394,
+        "rank": 12,
+        "selected": true
+      },
+      {
+        "feature_name": "tcp.flags",
+        "protocol_family": "Generic_Flow",
+        "is_protocol_derived": false,
+        "gain_importance": 4206.702193527093,
+        "normalized_importance": 0.010163777800438693,
+        "rank": 13,
+        "selected": true
+      },
+      {
+        "feature_name": "mqtt.hdrflags",
+        "protocol_family": "MQTT",
+        "is_protocol_derived": true,
+        "gain_importance": 2279.18594789505,
+        "normalized_importance": 0.005506722005644238,
+        "rank": 14,
+        "selected": true
+      },
+      {
+        "feature_name": "arp.opcode",
+        "protocol_family": "Generic_Flow",
+        "is_protocol_derived": false,
+        "gain_importance": 2273.77458106274,
+        "normalized_importance": 0.005493647647738681,
+        "rank": 15,
+        "selected": false
+      },
+      {
+        "feature_name": "tcp.connection.syn",
+        "protocol_family": "Generic_Flow",
+        "is_protocol_derived": false,
+        "gain_importance": 1688.4374460940116,
+        "normalized_importance": 0.0040794195173705005,
+        "rank": 16,
+        "selected": false
+      },
+      {
+        "feature_name": "tcp.connection.synack",
+        "protocol_family": "Generic_Flow",
+        "is_protocol_derived": false,
+        "gain_importance": 1301.3528673915414,
+        "normalized_importance": 0.0031441877213184764,
+        "rank": 17,
+        "selected": false
+      },
+      {
+        "feature_name": "tcp.connection.fin",
+        "protocol_family": "Generic_Flow",
+        "is_protocol_derived": false,
+        "gain_importance": 192.8151636887398,
+        "normalized_importance": 0.0004658590958264241,
+        "rank": 18,
+        "selected": false
+      },
+      {
+        "feature_name": "http.response",
+        "protocol_family": "HTTP",
+        "is_protocol_derived": true,
+        "gain_importance": 113.94618914331295,
+        "normalized_importance": 0.0002753044295461211,
+        "rank": 19,
+        "selected": false
+      },
+      {
+        "feature_name": "udp.port",
+        "protocol_family": "Generic_Flow",
+        "is_protocol_derived": false,
+        "gain_importance": 42.035218406450895,
+        "normalized_importance": 0.00010156093776580431,
+        "rank": 20,
+        "selected": false
+      },
+      {
+        "feature_name": "arp.hw.size",
+        "protocol_family": "Generic_Flow",
+        "is_protocol_derived": false,
+        "gain_importance": 29.951813469709805,
+        "normalized_importance": 7.23663246936609e-05,
+        "rank": 21,
+        "selected": false
+      },
+      {
+        "feature_name": "dns.qry.qu",
+        "protocol_family": "DNS_MMODBUS",
+        "is_protocol_derived": true,
+        "gain_importance": 15.476830107225396,
+        "normalized_importance": 3.739343909512372e-05,
+        "rank": 22,
+        "selected": false
+      },
+      {
+        "feature_name": "dns.qry.name",
+        "protocol_family": "DNS_MMODBUS",
+        "is_protocol_derived": true,
+        "gain_importance": 8.917376332047283,
+        "normalized_importance": 2.1545197979852166e-05,
+        "rank": 23,
+        "selected": false
+      },
+      {
+        "feature_name": "udp.time_delta",
+        "protocol_family": "Generic_Flow",
+        "is_protocol_derived": false,
+        "gain_importance": 3.4397319626754097,
+        "normalized_importance": 8.31070747425244e-06,
+        "rank": 24,
+        "selected": false
+      },
+      {
+        "feature_name": "tcp.flags.ack",
+        "protocol_family": "Generic_Flow",
+        "is_protocol_derived": false,
+        "gain_importance": 2.9036120772361755,
+        "normalized_importance": 7.015392726660971e-06,
+        "rank": 25,
+        "selected": false
+      },
+      {
+        "feature_name": "http.request.version",
+        "protocol_family": "HTTP",
+        "is_protocol_derived": true,
+        "gain_importance": 0.0,
+        "normalized_importance": 0.0,
+        "rank": 26,
+        "selected": false
+      },
+      {
+        "feature_name": "http.tls_port",
+        "protocol_family": "HTTP",
+        "is_protocol_derived": true,
+        "gain_importance": 0.0,
+        "normalized_importance": 0.0,
+        "rank": 27,
+        "selected": false
+      },
+      {
+        "feature_name": "http.referer",
+        "protocol_family": "HTTP",
+        "is_protocol_derived": true,
+        "gain_importance": 0.0,
+        "normalized_importance": 0.0,
+        "rank": 28,
+        "selected": false
+      },
+      {
+        "feature_name": "icmp.unused",
+        "protocol_family": "Generic_Flow",
+        "is_protocol_derived": false,
+        "gain_importance": 0.0,
+        "normalized_importance": 0.0,
+        "rank": 29,
+        "selected": false
+      },
+      {
+        "feature_name": "icmp.transmit_timestamp",
+        "protocol_family": "Generic_Flow",
+        "is_protocol_derived": false,
+        "gain_importance": 0.0,
+        "normalized_importance": 0.0,
+        "rank": 30,
+        "selected": false
+      },
+      {
+        "feature_name": "dns.qry.name.len",
+        "protocol_family": "DNS_MMODBUS",
+        "is_protocol_derived": true,
+        "gain_importance": 0.0,
+        "normalized_importance": 0.0,
+        "rank": 31,
+        "selected": false
+      },
+      {
+        "feature_name": "http.request.method",
+        "protocol_family": "HTTP",
+        "is_protocol_derived": true,
+        "gain_importance": 0.0,
+        "normalized_importance": 0.0,
+        "rank": 32,
+        "selected": false
+      },
+      {
+        "feature_name": "dns.qry.type",
+        "protocol_family": "DNS_MMODBUS",
+        "is_protocol_derived": true,
+        "gain_importance": 0.0,
+        "normalized_importance": 0.0,
+        "rank": 33,
+        "selected": false
+      },
+      {
+        "feature_name": "dns.retransmission",
+        "protocol_family": "DNS_MMODBUS",
+        "is_protocol_derived": true,
+        "gain_importance": 0.0,
+        "normalized_importance": 0.0,
+        "rank": 34,
+        "selected": false
+      },
+      {
+        "feature_name": "dns.retransmit_request_in",
+        "protocol_family": "DNS_MMODBUS",
+        "is_protocol_derived": true,
+        "gain_importance": 0.0,
+        "normalized_importance": 0.0,
+        "rank": 35,
+        "selected": false
+      },
+      {
+        "feature_name": "dns.retransmit_request",
+        "protocol_family": "DNS_MMODBUS",
+        "is_protocol_derived": true,
+        "gain_importance": 0.0,
+        "normalized_importance": 0.0,
+        "rank": 36,
+        "selected": false
+      },
+      {
+        "feature_name": "mqtt.conack.flags",
+        "protocol_family": "MQTT",
+        "is_protocol_derived": true,
+        "gain_importance": 0.0,
+        "normalized_importance": 0.0,
+        "rank": 37,
+        "selected": false
+      },
+      {
+        "feature_name": "mqtt.conflag.cleansess",
+        "protocol_family": "MQTT",
+        "is_protocol_derived": true,
+        "gain_importance": 0.0,
+        "normalized_importance": 0.0,
+        "rank": 38,
+        "selected": false
+      },
+      {
+        "feature_name": "mqtt.conflags",
+        "protocol_family": "MQTT",
+        "is_protocol_derived": true,
+        "gain_importance": 0.0,
+        "normalized_importance": 0.0,
+        "rank": 39,
+        "selected": false
+      },
+      {
+        "feature_name": "mqtt.len",
+        "protocol_family": "MQTT",
+        "is_protocol_derived": true,
+        "gain_importance": 0.0,
+        "normalized_importance": 0.0,
+        "rank": 40,
+        "selected": false
+      },
+      {
+        "feature_name": "mqtt.msg_decoded_as",
+        "protocol_family": "MQTT",
+        "is_protocol_derived": true,
+        "gain_importance": 0.0,
+        "normalized_importance": 0.0,
+        "rank": 41,
+        "selected": false
+      },
+      {
+        "feature_name": "mqtt.msgtype",
+        "protocol_family": "MQTT",
+        "is_protocol_derived": true,
+        "gain_importance": 0.0,
+        "normalized_importance": 0.0,
+        "rank": 42,
+        "selected": false
+      },
+      {
+        "feature_name": "mqtt.proto_len",
+        "protocol_family": "MQTT",
+        "is_protocol_derived": true,
+        "gain_importance": 0.0,
+        "normalized_importance": 0.0,
+        "rank": 43,
+        "selected": false
+      },
+      {
+        "feature_name": "mqtt.protoname",
+        "protocol_family": "MQTT",
+        "is_protocol_derived": true,
+        "gain_importance": 0.0,
+        "normalized_importance": 0.0,
+        "rank": 44,
+        "selected": false
+      },
+      {
+        "feature_name": "mqtt.topic_len",
+        "protocol_family": "MQTT",
+        "is_protocol_derived": true,
+        "gain_importance": 0.0,
+        "normalized_importance": 0.0,
+        "rank": 45,
+        "selected": false
+      },
+      {
+        "feature_name": "mqtt.ver",
+        "protocol_family": "MQTT",
+        "is_protocol_derived": true,
+        "gain_importance": 0.0,
+        "normalized_importance": 0.0,
+        "rank": 46,
+        "selected": false
+      },
+      {
+        "feature_name": "mbtcp.len",
+        "protocol_family": "DNS_MMODBUS",
+        "is_protocol_derived": true,
+        "gain_importance": 0.0,
+        "normalized_importance": 0.0,
+        "rank": 47,
+        "selected": false
+      },
+      {
+        "feature_name": "mbtcp.trans_id",
+        "protocol_family": "DNS_MMODBUS",
+        "is_protocol_derived": true,
+        "gain_importance": 0.0,
+        "normalized_importance": 0.0,
+        "rank": 48,
+        "selected": false
+      },
+      {
+        "feature_name": "mbtcp.unit_id",
+        "protocol_family": "DNS_MMODBUS",
+        "is_protocol_derived": true,
+        "gain_importance": 0.0,
+        "normalized_importance": 0.0,
+        "rank": 49,
+        "selected": false
+      }
+    ],
+    "limitation_note": "APAFC feature selection is computed strictly on the training split using gradient-boosted split gain / TreeSHAP importance. Protocol origins are inferred from verified protocol field names (MQTT, CoAP, HTTP, 6LoWPAN, DNS/Modbus) versus generic transport/flow statistics."
+  }
+}

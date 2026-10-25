@@ -1,0 +1,24 @@
+scenario,size_bytes,size_mb,row_count,comment_lines,parse_errors,schema_matches_23_cols,label_benign_lowercase,label_Benign_capitalized,label_Malicious,distinct_detailed_labels,detailed_labels_json,unset_service_count,unset_duration_count,unset_orig_bytes_count,unset_resp_bytes_count,unset_local_orig_count,unset_local_resp_count,unset_tunnel_parents_count
+CTU-Honeypot-Capture-4-1,61653,0.06,452,9,0,True,452,0,0,1,"{""-"": 452}",205,1,1,1,452,452,452
+CTU-Honeypot-Capture-5-1,182147,0.17,1374,9,0,True,1374,0,0,1,"{""-"": 1374}",454,298,298,298,1374,1374,1374
+Somfy-01,18024,0.02,130,9,0,True,130,0,0,1,"{""-"": 130}",60,0,0,0,130,130,130
+CTU-IoT-Malware-Capture-1-1,148305428,141.44,1008748,9,0,True,0,469275,539473,3,"{""-"": 469275, ""PartOfAHorizontalPortScan"": 539465, ""C&C"": 8}",1005507,796300,796300,796300,1008748,1008748,1008748
+CTU-IoT-Malware-Capture-17-1,8139370158,7762.31,54659855,9,0,True,0,31438,54628417,7,"{""PartOfAHorizontalPortScan"": 27311187, ""Okiru"": 13655215, ""DDoS"": 13655172, ""-"": 31438, ""C&C-HeartBeat"": 6834, ""Attack"": 4, ""PartOfAHorizontalPortScan-Attack"": 5}",54647949,27,27,27,54659855,54659855,54659855
+CTU-IoT-Malware-Capture-20-1,419604,0.4,3209,9,0,True,0,3193,16,2,"{""-"": 3193, ""C&C-Torii"": 16}",2617,885,885,885,3209,3209,3209
+CTU-IoT-Malware-Capture-21-1,428943,0.41,3286,9,0,True,0,3272,14,2,"{""-"": 3272, ""C&C-Torii"": 14}",1362,1161,1161,1161,3286,3286,3286
+CTU-IoT-Malware-Capture-3-1,24383537,23.25,156103,9,0,True,0,4536,151567,4,"{""PartOfAHorizontalPortScan"": 145597, ""-"": 4536, ""C&C"": 8, ""Attack"": 5962}",150195,73944,73944,73944,156103,156103,156103
+CTU-IoT-Malware-Capture-33-1,7867920121,7503.43,54454591,9,0,True,0,1380791,53073800,4,"{""-"": 1380791, ""PartOfAHorizontalPortScan"": 39459055, ""Okiru"": 13609467, ""C&C-HeartBeat"": 5278}",54454281,54437248,54437248,54437248,54454591,54454591,54454591
+CTU-IoT-Malware-Capture-34-1,3019311,2.88,23145,9,0,True,0,1923,21222,4,"{""-"": 1923, ""C&C"": 6706, ""PartOfAHorizontalPortScan"": 122, ""DDoS"": 14394}",21298,17824,17824,17824,23145,23145,23145
+CTU-IoT-Malware-Capture-35-1,1340179107,1278.09,10447787,9,0,True,0,8262389,2185398,5,"{""C&C"": 81, ""-"": 8262389, ""C&C-FileDownload"": 12, ""Attack"": 3, ""DDoS"": 2185302}",10446261,4432615,4432615,4432615,10447787,10447787,10447787
+CTU-IoT-Malware-Capture-36-1,1787852355,1705.03,13645098,9,0,True,0,2663,13642435,4,"{""C&C-HeartBeat"": 15688, ""Okiru"": 13626744, ""-"": 2663, ""Okiru-Attack"": 3}",13644345,13635427,13635427,13635427,13645098,13645098,13645098
+CTU-IoT-Malware-Capture-39-1,10885361439,10381.09,73568981,9,0,True,0,7337,73561644,4,"{""-"": 7337, ""C&C"": 1530, ""PartOfAHorizontalPortScan"": 73559437, ""Attack"": 677}",73565201,73562100,73562100,73562100,73568981,73568981,73568981
+CTU-IoT-Malware-Capture-42-1,585829,0.56,4426,9,0,True,0,4420,6,3,"{""FileDownload"": 3, ""C&C-FileDownload"": 3, ""-"": 4420}",2710,992,992,992,4426,4426,4426
+CTU-IoT-Malware-Capture-43-1,9363261631,8929.5,67321809,9,0,True,0,20574934,46746875,7,"{""C&C"": 3498, ""-"": 20574934, ""C&C-FileDownload"": 14, ""Okiru"": 8765885, ""PartOfAHorizontalPortScan"": 37911674, ""FileDownload"": 1, ""DDoS"": 65803}",67321589,67250964,67250964,67250964,67321809,67321809,67321809
+CTU-IoT-Malware-Capture-44-1,31179,0.03,237,9,0,True,0,211,26,4,"{""C&C-FileDownload"": 11, ""C&C"": 14, ""-"": 211, ""DDoS"": 1}",226,81,81,81,237,237,237
+CTU-IoT-Malware-Capture-48-1,531738215,507.11,3394338,9,0,True,0,3734,3390604,6,"{""C&C-HeartBeat-FileDownload"": 11, ""PartOfAHorizontalPortScan"": 3386119, ""Attack"": 2752, ""-"": 3734, ""C&C-PartOfAHorizontalPortScan"": 888, ""C&C-HeartBeat-Attack"": 834}",3394325,1,1,1,3394338,3394338,3394338
+CTU-IoT-Malware-Capture-49-1,853630635,814.09,5410561,9,0,True,0,3665,5406896,5,"{""PartOfAHorizontalPortScan"": 5404959, ""C&C"": 1922, ""-"": 3665, ""C&C-FileDownload"": 1, ""FileDownload"": 14}",5410535,1,1,1,5410561,5410561,5410561
+CTU-IoT-Malware-Capture-52-1,3070319722,2928.09,19781378,9,0,True,0,1794,19779584,5,"{""C&C-FileDownload"": 12, ""C&C"": 6, ""PartOfAHorizontalPortScan"": 19779564, ""C&C-Mirai"": 2, ""-"": 1794}",19781359,4,4,4,19781378,19781378,19781378
+CTU-IoT-Malware-Capture-60-1,467559811,445.9,3581028,9,0,True,0,2476,3578552,3,"{""DDoS"": 3578457, ""-"": 2476, ""C&C-HeartBeat"": 95}",3581026,3580404,3580404,3580404,3581028,3581028,3581028
+CTU-IoT-Malware-Capture-7-1,1581263847,1508.01,11454714,9,0,True,0,75955,11378759,4,"{""-"": 75955, ""C&C-HeartBeat"": 5778, ""Okiru"": 11333397, ""DDoS"": 39584}",11454706,11419542,11419542,11419542,11454714,11454714,11388988
+CTU-IoT-Malware-Capture-8-1,1431000,1.36,10403,9,0,True,0,2181,8222,2,"{""-"": 2181, ""C&C"": 8222}",10403,6185,6185,6185,10403,10403,10403
+CTU-IoT-Malware-Capture-9-1,993459767,947.44,6378293,9,0,True,0,22548,6355745,2,"{""PartOfAHorizontalPortScan"": 6355745, ""-"": 22548}",6377076,6361681,6361681,6361681,6378293,6378293,6378293

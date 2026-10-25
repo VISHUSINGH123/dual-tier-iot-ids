@@ -1,0 +1,76 @@
+# ==============================================================================
+# Dual-Tier Edge-Cloud IoT IDS - Production Git Ignore Configuration
+# ==============================================================================
+
+# Python Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+
+# Testing & Coverage Caches
+.pytest_cache/
+.pytest_tmp/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Temporary / Scratch Workspaces & Backups
+scratch/
+*.tmp
+*.bak
+*.swp
+*~
+temp_edge_sample.csv
+
+# Large Datasets & Captures (Excluded to comply with GitHub 100MB file limit)
+# Total size on local disk: ~58 GB across IoT-23, Edge-IIoTset, and MQTT datasets
+data/raw/
+archive
+archive/
+MQTT-IoT-IDS2020*/
+*.pcap
+*.pcapng
+*.cap
+*.labeled
+uploaded_*
+data/uploaded_*
+
+# Volatile Runtime Logs (Preserve directory structure via .gitkeep)
+logs/*.log
+logs/*.jsonl
+results/*.json
+results/*.csv
+
+# Retain essential configuration, lightweight synthetic demos, and reports
+!data/synthetic_edge_iiotset_demo.csv
+!data/synthetic_edge_iiotset_drifted.csv
+!data/processed/
+!data/processed/**
+!data/reports/
+!data/reports/**
+
+# Retain directory structure placeholders
+!data/.gitkeep
+!logs/.gitkeep
+!models/.gitkeep
+!results/.gitkeep
+
+# Operating System & IDE Metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace

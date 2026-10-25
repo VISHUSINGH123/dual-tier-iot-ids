@@ -1,0 +1,95 @@
+{
+  "capture_architecture_verification": {
+    "supports_live_nic_promiscuous_capture": false,
+    "supports_pcap_file_replay": true,
+    "supports_tcp_socket_payload_ingestion": true,
+    "explanation": "`iot_ids_framework` intentionally treats live NIC packet capture (libpcap/Npcap/eBPF) as an external adapter boundary (`README.md` line 79). It provides `PCAPReader` for offline `.pcap` file replay and `simulate_attacks.py` for TCP socket payload ingestion on a bound `<host>:<port>` (`127.0.0.1:9999`). A user-space TCP `SOCK_STREAM` listener only receives connections addressed directly to its bound port; it cannot sniff traffic between other ports or interfaces without a raw packet capture driver."
+  },
+  "test_endpoint": "127.0.0.1:50705",
+  "temp_audit_log_path": "M:\\projects\\proj2(3 credits)\\logs\\local_sim_verification_alerts.jsonl",
+  "total_flows_sent": 6,
+  "total_flows_observed": 6,
+  "alerts_logged_count": 3,
+  "false_positives": 0,
+  "missed_detections": 0,
+  "observed_flows": [
+    {
+      "scenario_id": "benign_mqtt_telemetry",
+      "timestamp_epoch": 1792911581.1856,
+      "client_socket_addr": "127.0.0.1:50706",
+      "server_listen_addr": "127.0.0.1:50705",
+      "ground_truth_binary": "benign",
+      "ground_truth_category": "benign",
+      "predicted_class": "benign",
+      "predicted_binary": "benign",
+      "confidence": 1.0,
+      "alert_emitted": false,
+      "top_shap_feature": null
+    },
+    {
+      "scenario_id": "benign_coap_actuator",
+      "timestamp_epoch": 1792911581.1953,
+      "client_socket_addr": "127.0.0.1:50707",
+      "server_listen_addr": "127.0.0.1:50705",
+      "ground_truth_binary": "benign",
+      "ground_truth_category": "benign",
+      "predicted_class": "benign",
+      "predicted_binary": "benign",
+      "confidence": 0.9983,
+      "alert_emitted": false,
+      "top_shap_feature": null
+    },
+    {
+      "scenario_id": "benign_http_health",
+      "timestamp_epoch": 1792911581.196,
+      "client_socket_addr": "127.0.0.1:50708",
+      "server_listen_addr": "127.0.0.1:50705",
+      "ground_truth_binary": "benign",
+      "ground_truth_category": "benign",
+      "predicted_class": "benign",
+      "predicted_binary": "benign",
+      "confidence": 0.9999,
+      "alert_emitted": false,
+      "top_shap_feature": null
+    },
+    {
+      "scenario_id": "attack_mqtt_ddos_flood",
+      "timestamp_epoch": 1792911581.1965,
+      "client_socket_addr": "127.0.0.1:50709",
+      "server_listen_addr": "127.0.0.1:50705",
+      "ground_truth_binary": "malicious",
+      "ground_truth_category": "ddos",
+      "predicted_class": "ddos",
+      "predicted_binary": "malicious",
+      "confidence": 1.0,
+      "alert_emitted": true,
+      "top_shap_feature": "packet_count"
+    },
+    {
+      "scenario_id": "attack_port_scan_burst",
+      "timestamp_epoch": 1792911581.197,
+      "client_socket_addr": "127.0.0.1:50710",
+      "server_listen_addr": "127.0.0.1:50705",
+      "ground_truth_binary": "malicious",
+      "ground_truth_category": "port_scan",
+      "predicted_class": "port_scan",
+      "predicted_binary": "malicious",
+      "confidence": 0.9439,
+      "alert_emitted": true,
+      "top_shap_feature": "protocol_id"
+    },
+    {
+      "scenario_id": "attack_http_sql_injection",
+      "timestamp_epoch": 1792911581.1973,
+      "client_socket_addr": "127.0.0.1:50711",
+      "server_listen_addr": "127.0.0.1:50705",
+      "ground_truth_binary": "malicious",
+      "ground_truth_category": "injection",
+      "predicted_class": "injection",
+      "predicted_binary": "malicious",
+      "confidence": 0.7217,
+      "alert_emitted": true,
+      "top_shap_feature": "dst_port"
+    }
+  ]
+}
