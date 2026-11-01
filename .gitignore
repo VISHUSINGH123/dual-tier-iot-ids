@@ -29,6 +29,7 @@ htmlcov/
 
 # Temporary / Scratch Workspaces & Backups
 scratch/
+reports/
 *.tmp
 *.bak
 *.swp
